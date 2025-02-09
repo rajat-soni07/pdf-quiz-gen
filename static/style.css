@@ -1,0 +1,154 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* Center the file input section */
+#ask {
+    text-align: center;
+    margin-bottom: 20px;  /* Adds spacing between input and button */
+}
+
+/* Hide default file input */
+#pdfFile {
+    display: none;
+}
+
+/* Style and center the file input label */
+label[for="pdfFile"] {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin: auto;
+    transition: background-color 0.3s ease;
+}
+
+label[for="pdfFile"]:hover {
+    background-color: #2980b9;
+}
+
+/* Center all buttons */
+button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;  /* Centers button & adds spacing */
+    text-align: center;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+/* Style for summary section */
+#summary, #quiz, #score {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+/* Justify-align the summary text */
+#summary p {
+    text-align: justify;
+}
+
+/* Center quiz container */
+#quiz {
+    text-align: left;
+}
+
+#quiz div {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+/* Quiz answer styling */
+.options label {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.options input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Highlight selected options */
+.options input[type="radio"]:checked + label {
+    background-color: #f0f0f0;
+}
+
+/* Quiz result styling */
+.result-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Highlight correct and incorrect answers */
+.correct {
+    color: white;
+    background-color: #2ecc71;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.incorrect {
+    color: white;
+    background-color: #e74c3c;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Center the final score */
+#score h2 {
+    text-align: center;
+    color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    #ask, label[for="pdfFile"], button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
