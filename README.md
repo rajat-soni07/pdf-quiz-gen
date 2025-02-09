@@ -24,7 +24,7 @@ This app provides a convenient way to summarize lecture notes from uploaded PDFs
 To run this app locally:
 1. Clone this repository.
 2. Install dependencies using `pip install -r requirements.txt`.
-3. Run the Flask app using `python app.py`.
+3. Run the Flask app using `python main.py`.
 4. Access the app in your web browser at `http://localhost:5000`.
 
 ## Website
