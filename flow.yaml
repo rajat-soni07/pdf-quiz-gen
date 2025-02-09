@@ -1,0 +1,61 @@
+# Flow specification version
+version: "0.1.0"
+
+# Flow metadata and configuration
+metadata:
+  name: "learning-quiz-gen"
+  description: "Takes a lecture/chapter PDF and gives out a summary and some practice questions for the same with explainations of each"
+  author: "Rajatsoni07"
+  tags: [quiz]
+  private: true
+
+# Primary input definitions
+inputs:
+  pdf_text:
+    type: string
+    description: "Enter the text extracted from the complete pdf"
+    required: true
+    example: "-----"
+  num_ques:
+    type: string
+    description: "How many questions do you want to generate"
+    required: false
+    example: "7"
+
+model:
+  provider: "openai"
+  name: "gpt-4o"
+
+prompt: |
+  Generate a summary (large enough to describe all topics in text in detail (150-200 words)) and multiple-choice-questions for the given text and number of questions
+  
+  Text : {pdf_text}
+
+  Number of questions to generate - {num_ques}
+
+  Give your output in the following format 
+
+  (Insert the summary of the text here without any prefix)
+  
+  -$-
+   [Generated Question] (only the question and no serial number as prefix Eg. What is your name)
+   @@@
+   a) [Option A]  
+   @@@
+   b) [Option B]  
+   @@@
+   c) [Option C]  
+   @@@
+   d) [Option D]  
+   @@@
+   [Correct Option](Only option number not option text Eg. a b c d)
+   @@@
+  [Why this answer is correct] (Just directly write the explaination and do not use extra text)
+  -$- ...
+  and so on each questions seperated by a "-$-" sign
+  
+
+
+
+readme: |
+  This is a flow designed to generate a learning quiz from a text
