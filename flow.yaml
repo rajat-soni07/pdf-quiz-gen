@@ -3,11 +3,11 @@ version: "0.1.0"
 
 # Flow metadata and configuration
 metadata:
-  name: "learning-quiz-gen"
+  name: "quiz-gen-pdf"
   description: "Takes a lecture/chapter PDF and gives out a summary and some practice questions for the same with explainations of each"
-  author: "Rajatsoni07"
+  author: "rajatsoni07"
   tags: [quiz]
-  private: true
+  private: false
 
 # Primary input definitions
 inputs:
